@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+branch_name=$(git rev-parse --abbrev-ref HEAD)
+if [[ "$branch_name" == "master" ]]; then
+    git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
+    echo "Done!"
+else
+    echo "Must be on master, not $branch_name!"
+fi

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash¬
+ 
+
+TAG_NAME=$1
+
+git fetch --tags
+git tag -d $TAG_NAME
+git push origin :refs/tags/$TAG_NAME
+git tag $TAG_NAME
+git push origin $TAG_NAME

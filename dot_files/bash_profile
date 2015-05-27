@@ -1,0 +1,39 @@
+ export HEGEMON_ENVIRONMENT=vagrant
+ export PATH=$PATH:~/Playground/hegemon/scripts
+
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+export WORKON_HOME=~/.virtualenvs
+export PIP_REQUIRE_VIRTUALENV=true
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PYTHONDONTWRITEBYTECODE=1
+syspip() {
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+
+export HEGEMON_DEFAULT_APP=helios
+
+function cf() {
+    if [ $# -eq 1 ]; then
+        args=$1
+    else
+        args=$1:\""${@:2}"\"
+    fi
+    charon fab "$args"
+}
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+function vm() {
+    if [ $1 == "up" ]; then
+        VAGRANT_CWD=~/Playground/hegemon/apps/hegemon vagrant reload
+        VAGRANT_CWD=~/Playground/hegemon/apps/helios vagrant reload
+    elif [ $1 == "down" ]; then
+        VAGRANT_CWD=~/Playground/hegemon/apps/hegemon vagrant halt
+        VAGRANT_CWD=~/Playground/hegemon/apps/helios vagrant halt
+    else
+        echo "What is $1? You only get 'up' or 'down'."
+    fi
+}
+
