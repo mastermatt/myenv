@@ -1,16 +1,29 @@
- export HEGEMON_ENVIRONMENT=vagrant
- export PATH=$PATH:~/Playground/hegemon/scripts
+
+export PATH=$PATH:~/Playground/hegemon/scripts
+export PATH="/usr/local/heroku/bin:$PATH"
 
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 export WORKON_HOME=~/.virtualenvs
-export PIP_REQUIRE_VIRTUALENV=true
+
+export HEGEMON_DEFAULT_APP=helios
+export HEGEMON_ENVIRONMENT=vagrant
+
+export PIP_REQUIRE_VIRTUALENV=false
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PYTHONDONTWRITEBYTECODE=1
+
+export GOPATH=~/Playground/go
+export PATH=$PATH:$GOPATH/bin
+
+if [[ -r $HOME/.hashcorp_atlas_token ]]; then
+    export ATLAS_TOKEN=$(cat $HOME/.hashcorp_atlas_token)
+else
+    echo "Unable to find atlas token"
+fi
+
 syspip() {
     PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
-
-export HEGEMON_DEFAULT_APP=helios
 
 function cf() {
     if [ $# -eq 1 ]; then
