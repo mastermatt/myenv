@@ -20,13 +20,13 @@ install-bash:
 	$(LN) $(realpath dot_files/bashrc.d) ~/.bashrc.d
 
 install-vim:
-	$(RM) ~/.vimrc 
+	$(RM) ~/.vimrc
 	$(LN) $(realpath dot_files/vimrc) ~/.vimrc
 
 install-git:
 	$(RM) ~/.gitconfig ~/.gitignore_global
-	$(LN) $(realpath dot_files/gitconfig) ~/.gitconfig 
-	$(LN) $(realpath dot_files/gitignore_global) ~/.gitignore_global 
+	$(LN) $(realpath dot_files/gitconfig) ~/.gitconfig
+	$(LN) $(realpath dot_files/gitignore_global) ~/.gitignore_global
 
 update:
 	git pull --verbose
