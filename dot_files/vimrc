@@ -3,6 +3,7 @@ syntax on
 
 " Enable line numbers
 set number
+set ruler
 
 " Make tabs as wide as two spaces
 set tabstop=4

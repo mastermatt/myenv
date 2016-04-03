@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# removes all of the branches that are already merged into master
 branch_name=$(git rev-parse --abbrev-ref HEAD)
 if [[ "$branch_name" == "master" ]]; then
     git branch --merged | grep -v "\*" | xargs -n 1 git branch -d

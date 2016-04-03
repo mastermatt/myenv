@@ -1,0 +1,36 @@
+[user]
+    name = Matt R. Wilson
+    email = matt@mattw.co
+
+[github]
+    username = mastermatt
+
+[core]
+    autocrlf = input
+    excludesfile = ~/.gitignore_global
+    
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = auto
+
+[alias]
+  s = status
+  br = branch
+  ci = commit
+  co = checkout
+
+[push]
+    default = simple
+
+[apply]
+  whitespace = nowarn
+
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
+
+[include]
+  path = .gitconfig.local

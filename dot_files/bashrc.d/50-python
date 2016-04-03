@@ -1,0 +1,16 @@
+
+export WORKON_HOME=~/.virtualenvs
+
+export PIP_REQUIRE_VIRTUALENV=false
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+export PYTHONDONTWRITEBYTECODE=1
+
+syspip() {
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+
+# `pip install --user` installs to ~/.local
+if [[ -d ~/.local/bin ]]; then
+    export PATH=$PATH:~/.local/bin
+fi

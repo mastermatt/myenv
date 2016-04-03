@@ -1,0 +1,5 @@
+
+alias git=hub
+
+alias mentions='python ~/Playground/scratches/random_github_user.py | pbcopy && echo `pbpaste`'
+alias pr='mentions && hub pull-request -o'

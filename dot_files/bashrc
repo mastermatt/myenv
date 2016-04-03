@@ -1,0 +1,4 @@
+### Include modules from .bashrc.d
+if [ -d ~/.bashrc.d ]; then
+    for f in ~/.bashrc.d/*; do source $f; done
+fi

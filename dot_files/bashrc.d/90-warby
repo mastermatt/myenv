@@ -1,0 +1,10 @@
+
+export PATH=$PATH:~/Playground/hegemon/scripts
+export HEGEMON_DEFAULT_APP=helios
+export HEGEMON_ENVIRONMENT=vagrant
+
+if [[ -r $HOME/.hashcorp_atlas_token ]]; then
+    export ATLAS_TOKEN=$(cat $HOME/.hashcorp_atlas_token)
+else
+    echo "Unable to find atlas token"
+fi
