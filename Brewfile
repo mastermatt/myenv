@@ -9,6 +9,8 @@ tap 'caskroom/versions'
 
 brew 'ack'
 brew 'coreutils'
+brew 'git'
+brew 'hub'
 brew 'openssl'
 brew 'readline'
 brew 'wget'
