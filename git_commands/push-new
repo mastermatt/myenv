@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# Pushes the current branch to the origin remote and sets upstream tracking.
+
+branch_name=$(git rev-parse --abbrev-ref HEAD)
+if [[ "$branch_name" == "master" ]]; then
+    echo "You are on master!"
+else
+    git push --set-upstream origin $branch_name
+fi

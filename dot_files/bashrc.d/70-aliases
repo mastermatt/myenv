@@ -2,4 +2,4 @@
 alias git=hub
 
 alias mentions='python ~/Playground/scratches/random_github_user.py | pbcopy && echo `pbpaste`'
-alias pr='hub pull-request -o'
+alias pr='git push-new && git pull-request -o'
