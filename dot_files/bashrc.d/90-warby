@@ -1,4 +1,5 @@
 
+export HELIOS_COMMIT_SUGGESTIONS=false
 export PATH=$PATH:~/Playground/hegemon/scripts
 export HEGEMON_DEFAULT_APP=helios
 export HEGEMON_ENVIRONMENT=vagrant

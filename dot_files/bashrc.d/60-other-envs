@@ -1,3 +1,7 @@
 
 export PATH="$PATH:/usr/local/heroku/bin"
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+
+if [[ -r $HOME/.homebrew_github_api_token ]]; then
+    export HOMEBREW_GITHUB_API_TOKEN=$(cat $HOME/.homebrew_github_api_token)
+fi
