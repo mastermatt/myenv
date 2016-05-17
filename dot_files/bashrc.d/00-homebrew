@@ -1,5 +1,10 @@
-### Homebrew stuff ###
+
+if [[ -r $HOME/.homebrew_github_api_token ]]; then
+    export HOMEBREW_GITHUB_API_TOKEN=$(cat $HOME/.homebrew_github_api_token)
+fi
+
 HOMEBREW="$(which brew 2>/dev/null)"
+
 if [ -n "$HOMEBREW" ] ; then
     # Make sure brew path comes first so its executables
     # are found before defaults.  Specifically helpful for
