@@ -1,13 +1,13 @@
 [user]
-    name = Matt R. Wilson
-    email = matt@mattw.co
+  name = Matt R. Wilson
+  email = matt@mattw.co
 
 [github]
-    username = mastermatt
+  username = mastermatt
 
 [core]
-    autocrlf = input
-    excludesfile = ~/.gitignore_global
+  autocrlf = input
+  excludesfile = ~/.gitignore_global
 
 [color]
   diff = auto
@@ -21,16 +21,19 @@
   ci = commit
   co = checkout
 
+[fetch]
+  prune = true
+
 [push]
-    default = simple
+  default = simple
 
 [apply]
   whitespace = nowarn
 
 [filter "lfs"]
-    clean = git-lfs clean %f
-    smudge = git-lfs smudge %f
-    required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %
+  required = true
 
 [include]
   path = ~/.gitconfig_local
