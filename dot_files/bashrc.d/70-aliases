@@ -1,5 +1,19 @@
 
 alias git=hub
+alias v=vagrant
 
+alias ls='ls -lAGh'
 alias mentions='python ~/Playground/scratches/random_github_user.py | pbcopy && echo `pbpaste`'
 alias pr='git push-new && git pull-request -o'
+alias prod-service='bash ~/Playground/scripts/prod-service'
+
+
+alias fuck-local='cd ~/Playground/helios && \
+        v box update && \
+        v destroy --force && \
+        v up && \
+        fab vagrant.ssh_refresh && \
+        ssh-keygen -R wp-local.com && \
+        fab vagrant.provision && \
+        fab vagrant.configure_local_db'
+

@@ -1,4 +1,4 @@
-
+# Helios
 export HELIOS_COMMIT_SUGGESTIONS=false
 export PATH=$PATH:~/Playground/hegemon/scripts
 export HEGEMON_DEFAULT_APP=helios
@@ -9,3 +9,10 @@ if [[ -r $HOME/.hashcorp_atlas_token ]]; then
 else
     echo "Unable to find atlas token"
 fi
+
+# Front-end responsive
+export NODE_ENV=local
+export DEBUG=true
+export STATIC_URL=localhost:9011
+export NODE_STORE_URL=localhost
+export PYTHON_API_HOST=python-api.wp-dev.io
