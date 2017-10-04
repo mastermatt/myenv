@@ -11,7 +11,7 @@ all:
 	@echo "* make update   -- get latest version from github, install manually"
 	@echo ""
 
-install: install-bash install-vim install-git
+install: install-bash install-vim install-git install-gpg
 
 install-bash:
 	$(RM) ~/.bash_profile ~/.bashrc ~/.bashrc.d
@@ -27,6 +27,12 @@ install-git:
 	$(RM) ~/.gitconfig ~/.gitignore_global
 	$(LN) $(realpath dot_files/gitconfig) ~/.gitconfig
 	$(LN) $(realpath dot_files/gitignore_global) ~/.gitignore_global
+	touch ~/.gitconfig_local
+
+install-gpg:
+	$(RM) ~/.gnupg/gpg.conf ~/.gnupg/gpg-agent.conf
+	$(LN) $(realpath dot_files/gnupg/gpg.conf) ~/.gnupg/gpg.conf
+	$(LN) $(realpath dot_files/gnupg/gpg-agent.conf) ~/.gnupg/gpg-agent.conf
 
 update:
 	git pull --verbose

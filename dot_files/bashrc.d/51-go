@@ -1,2 +1,2 @@
-export GOPATH=~/Playground/go
+export GOPATH=~/src/go
 export PATH=$PATH:$GOPATH/bin
