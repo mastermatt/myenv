@@ -1,14 +1,63 @@
-set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+" To install: vim, :BundleInstall
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/vundle'
+
+" Other github packages for Vundle to handle
+Plugin 'airblade/vim-gitgutter'
+Plugin 'dracula/vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'tpope/vim-commentary.git'
+Plugin 'tpope/vim-fugitive.git'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 syntax on
-
-" Enable line numbers
 set number
-set ruler
-
-" Make tabs as wide as two spaces
+set ruler                           " show the cursor position all the time
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set backspace=indent,eol,start      " Make backspace behave like every other editor.
+set pastetoggle=<F2>
+set smartindent
+set incsearch
+set ignorecase
+set autoindent
+set mouse=a
+set cursorline "cursorcolumn
+set hlsearch						" Highlight all matched terms.
+set incsearch						" Incrementally highlight, as we type.
+
+filetype indent on
+
+
+" Lets map things
+imap jj <Esc>
+imap <C-w><C-w> <Esc><C-w><C-w>
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+
+""highlight whitespace
+highlight ErrorMsg ctermbg=red ctermfg=white guibg=#599
+match ErrorMsg '\s\+$'
+
+cmap w!! w !sudo tee >/dev/null %
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%100v.\+/
+
+
 
 " Show invisible characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_

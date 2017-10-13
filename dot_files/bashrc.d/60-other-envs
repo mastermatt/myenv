@@ -1,3 +1,5 @@
 
 export PATH="$PATH:/usr/local/heroku/bin"
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

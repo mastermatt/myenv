@@ -18,6 +18,7 @@ brew 'pinentry-mac'
 brew 'readline'
 brew 'wget'
 
+cask 'flux'
 cask 'iterm2'
 cask 'google-chrome'
 cask 'keybase'
