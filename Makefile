@@ -28,6 +28,11 @@ install-git:
 	$(LN) $(realpath dot_files/gitconfig) ~/.gitconfig
 	$(LN) $(realpath dot_files/gitignore_global) ~/.gitignore_global
 	touch ~/.gitconfig_local
+	for SOURCE in $(realpath git_commands)/*; do \
+		TARGET="/usr/local/bin/git-$$(basename $$SOURCE)"; \
+		$(RM) $$TARGET; \
+		$(LN) $$SOURCE $$TARGET; \
+	done
 
 install-gpg:
 	$(RM) ~/.gnupg/gpg.conf ~/.gnupg/gpg-agent.conf
