@@ -8,6 +8,7 @@ tap 'homebrew/bundle'
 tap 'caskroom/versions'
 
 brew 'ack'
+brew 'bash-completion'
 brew 'coreutils'
 brew 'git'
 brew 'gpg'
