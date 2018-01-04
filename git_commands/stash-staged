@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# from https://gist.github.com/brookinc/e2589a8c5ca33f804e4868f6bfc18282
+# this script stashes the currently staged files, and leaves everything else in the working directory
+# (source: https://stackoverflow.com/questions/14759748/stashing-only-staged-changes-in-git-is-it-possible/39644782#39644782)
+
+# Read the desired stash description from the command line, or prompt the user for it if necessary
+STASHNAME=$1
+while [ "$STASHNAME" = "" ] ; do
+  read -p "Enter a description for this stash: " STASHNAME
+done
+
+# Stash everything temporarily.  Keep staged files, discard everything else after stashing.
+git stash --keep-index
+
+# Stash everything that remains (only the staged files should remain)  This is the stash we want to keep, so give it a name.
+git stash save "$STASHNAME"
+
+# Apply the original stash to get us back to where we started.
+git stash apply stash@{1}
+
+# Create a temporary patch to reverse the originally staged changes and apply it
+git stash show -p | git apply -R
+
+# Delete the temporary stash
+git stash drop stash@{1}
