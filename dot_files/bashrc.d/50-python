@@ -1,4 +1,4 @@
-
+#!/usr/bin/env bash
 export WORKON_HOME=~/.virtualenvs
 
 export PIP_REQUIRE_VIRTUALENV=false

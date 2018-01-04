@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 gifify() {
   if [[ -n "$1" ]]; then

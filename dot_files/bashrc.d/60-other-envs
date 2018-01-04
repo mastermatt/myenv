@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 export PATH="$PATH:/usr/local/heroku/bin"
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion

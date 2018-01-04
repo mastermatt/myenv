@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # Pushes the current branch to the origin remote and sets upstream tracking.
 

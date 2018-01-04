@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 if [[ -r $HOME/.homebrew_github_api_token ]]; then
     export HOMEBREW_GITHUB_API_TOKEN=$(cat $HOME/.homebrew_github_api_token)
