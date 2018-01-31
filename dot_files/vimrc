@@ -34,8 +34,8 @@ set ignorecase
 set autoindent
 set mouse=a
 set cursorline "cursorcolumn
-set hlsearch						" Highlight all matched terms.
-set incsearch						" Incrementally highlight, as we type.
+set hlsearch                        " Highlight all matched terms.
+set incsearch                       " Incrementally highlight, as we type.
 
 filetype indent on
 

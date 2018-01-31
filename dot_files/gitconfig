@@ -43,6 +43,6 @@
 
 [commit]
   gpgsign = true
-  
+
 [rebase]
-	autosquash = true
+  autosquash = true

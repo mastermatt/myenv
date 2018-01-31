@@ -20,7 +20,7 @@ docker-destroy-all(){
   if [ -n "$containers" ] ; then
     docker stop $containers
   fi
-  
+
   # Delete all containers
   containers=`docker ps -a -q`
   if [ -n "$containers" ]; then
@@ -32,4 +32,4 @@ docker-destroy-all(){
   if [ -n "$images" ]; then
     docker rmi -f $images
   fi
-}         
+}
