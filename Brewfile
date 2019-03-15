@@ -24,7 +24,6 @@ brew 'pinentry-mac'
 brew 'readline'
 brew 'tig'
 brew 'wget'
-brew 'yarn', args: ['without-node']
 
 cask 'alfred'
 cask 'docker'

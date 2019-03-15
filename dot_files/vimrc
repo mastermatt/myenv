@@ -58,11 +58,9 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%100v.\+/
 
 
-
 " Show invisible characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
 
 " spell check my git commits
 autocmd FileType gitcommit setlocal spell
-
