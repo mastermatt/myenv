@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Short and clean log
+
+git log --oneline --decorate -n 25
