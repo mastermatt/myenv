@@ -14,10 +14,11 @@ all:
 install: install-bash install-vim install-git install-gpg
 
 install-bash:
-	$(RM) ~/.bash_profile ~/.bashrc ~/.bashrc.d
+	$(RM) ~/.bash_profile ~/.bashrc ~/.bashrc.d ~/.zshrc
 	$(LN) $(realpath dot_files/bash_profile) ~/.bash_profile
 	$(LN) $(realpath dot_files/bashrc) ~/.bashrc
 	$(LN) $(realpath dot_files/bashrc.d) ~/.bashrc.d
+	$(LN) $(realpath dot_files/zshrc) ~/.zshrc
 
 install-vim:
 	$(RM) ~/.vimrc
@@ -35,6 +36,7 @@ install-git:
 	done
 
 install-gpg:
+	mkdir -p ~/.gnupg
 	$(RM) ~/.gnupg/gpg.conf ~/.gnupg/gpg-agent.conf
 	$(LN) $(realpath dot_files/gnupg/gpg.conf) ~/.gnupg/gpg.conf
 	$(LN) $(realpath dot_files/gnupg/gpg-agent.conf) ~/.gnupg/gpg-agent.conf

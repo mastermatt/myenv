@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+# Simple Pull Request creator
+#
+# - Pushes the current branch to HEAD before creating the pull request.
+# - Uses the message from the first commit on the branch as pull request title and description without opening a text editor.
+# - Opens the new pull request in a web browser.
+
+branch_name=$(git branch-name)
+if [[ "$branch_name" == "master" ]]; then
+    echo "You are on master!"
+else
+    hub pull-request --push --no-edit --browse
+fi

@@ -12,11 +12,6 @@ if [ -n "$HOMEBREW" ] ; then
     # php and other things already provided by OSX.
     export PATH=`brew --prefix`/bin:`brew --prefix`/sbin:$PATH
 
-    ### bash-completion ###
-    if [ -f `brew --prefix`/etc/bash_completion ]; then
-        . `brew --prefix`/etc/bash_completion
-    fi
-
     ### rbenv ###
     if which rbenv > /dev/null; then
         export RBENV_ROOT=/usr/local/var/rbenv

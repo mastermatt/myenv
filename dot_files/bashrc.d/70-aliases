@@ -6,6 +6,6 @@ alias dc=docker-compose
 alias v=vagrant
 
 alias ls='ls -lAGh'
-alias pr='git push-new && git pull-request -o'
+alias pr='git publish && git spr'
 
 alias npmreinstall='rm -f package-lock.json && rm -rf node_modules && NR_NATIVE_METRICS_NO_BUILD=true npm install'

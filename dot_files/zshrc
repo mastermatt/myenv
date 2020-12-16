@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
+# Keeping everything in .bashrc so it has the same behavior in non-interactive shells
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
+fi
+
