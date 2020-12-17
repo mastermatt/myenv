@@ -3,8 +3,10 @@
 # Pushes the current branch to the origin remote and sets upstream tracking.
 
 branch_name=$(git branch-name)
-if [[ "$branch_name" == "master" ]]; then
-    echo "You are on master!"
+protected_branches=(master main next)
+
+if [[ " ${protected_branches[@]} " =~ " ${branch_name} " ]]; then
+    echo "You are on ${branch_name}!"
 else
     git push --set-upstream origin ${branch_name}
 fi
