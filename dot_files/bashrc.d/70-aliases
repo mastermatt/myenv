@@ -4,6 +4,7 @@ alias git=hub
 alias d=docker
 alias dc='docker compose'
 alias v=vagrant
+alias ws=webstorm
 
 alias ls='ls -lAGh'
 alias pr='git publish && git spr'
