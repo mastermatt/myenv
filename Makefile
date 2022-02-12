@@ -11,7 +11,7 @@ all:
 	@echo "* make update   -- get latest version from github, install manually"
 	@echo ""
 
-install: install-bash install-vim install-git install-gpg
+install: install-bash install-vim install-git install-gpg install-iterm
 
 install-bash:
 	$(RM) ~/.bash_profile ~/.bashrc ~/.bashrc.d ~/.zshrc
@@ -40,6 +40,9 @@ install-gpg:
 	$(RM) ~/.gnupg/gpg.conf ~/.gnupg/gpg-agent.conf
 	$(LN) $(realpath dot_files/gnupg/gpg.conf) ~/.gnupg/gpg.conf
 	$(LN) $(realpath dot_files/gnupg/gpg-agent.conf) ~/.gnupg/gpg-agent.conf
+
+install-iterm:
+	$(LN) $(realpath iterm2_profiles.json) ~/Library/Application\ Support/iTerm2/DynamicProfiles/
 
 update:
 	git pull --verbose
