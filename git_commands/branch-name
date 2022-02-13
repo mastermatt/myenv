@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-#
-# Get the current branch name (not so useful in itself, but used in other aliases)
-
-git rev-parse --abbrev-ref HEAD

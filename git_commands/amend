@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-#
-# Use the last commit message and amend your staged stuffs.
-
-git commit --amend --reuse-message=HEAD

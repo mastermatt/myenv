@@ -7,6 +7,7 @@ alias v=vagrant
 alias ws=webstorm
 
 alias ls='ls -lAGh'
+alias gits='git s'
 alias pr='git publish && git spr'
 
 alias npmreinstall='rm -f package-lock.json && rm -rf node_modules && NR_NATIVE_METRICS_NO_BUILD=true npm install'
