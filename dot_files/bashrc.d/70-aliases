@@ -9,3 +9,6 @@ alias gits='git s'
 alias pr='git publish && git spr'
 
 alias npmreinstall='rm -f package-lock.json && rm -rf node_modules && NR_NATIVE_METRICS_NO_BUILD=true npm install'
+
+alias certsha='pbpaste | openssl x509 -fingerprint -sha256 -noout'
+alias certtext='pbpaste | openssl x509 -text -noout'
