@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+alias vaultlogin='vault login -method=okta username=matt.wilson@mantl.com'
+
+NPM_TOKEN="$(cat $HOME/.npmrc | awk -F'_authToken=' '{ print $2 }')"
+export NPM_TOKEN
+
+export VAULT_HTTP_PROXY=http://127.0.0.1:65230
+export VAULT_ADDR=http://vault.mantl.sdm.network
+export VAULT_TOOLS_VERSION=vault-tools-darwin-arm64
+
+export VAULT_ENV=development
+export MANTL_ENV=development
+export NODE_ENV=development
+export USING_TURBOREPO=true
+
+
+# Q2 SDK
+# source ~/.antilles/sdk_env_vars.sh
+# source /Users/matt/.antilles/antilles_completion.zsh
+# source /Users/matt/.antilles/set_virtualenv.sh

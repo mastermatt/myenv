@@ -24,6 +24,7 @@
   amend = commit --amend --reuse-message=HEAD # Use the last commit message and amend your staged stuffs.
   branch-name = rev-parse --abbrev-ref HEAD # Get the current branch name (not so useful in itself, but used in other aliases)
   undo = reset --soft HEAD^ # Undo your last commit, but don't throw away your changes
+  ephreset = commit --allow-empty -m 'ephemeral reset'
 
 [fetch]
   prune = true

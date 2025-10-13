@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 if [[ -r $HOME/.homebrew_github_api_token ]]; then
     export HOMEBREW_GITHUB_API_TOKEN=$(cat $HOME/.homebrew_github_api_token)
 fi
