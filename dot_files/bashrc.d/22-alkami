@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
 
-# Managed by Configure-Netskope-Local-CA-Bundle script
-export REQUESTS_CA_BUNDLE='/Users/matt/.netskope/cacert_ns_combined.pem'
+# Managed by Netskope CA Bundle Script
+export REQUESTS_CA_BUNDLE=/Users/matt/.netskope/nscacert_combined.pem
 
-# Managed by Configure-Netskope-Local-CA-Bundle script
-export HTTPLIB2_CA_CERTS='/Users/matt/.netskope/cacert_ns_combined.pem'
+# Managed by Netskope CA Bundle Script
+export HTTPLIB2_CA_CERTS=/Users/matt/.netskope/nscacert_combined.pem
 
-# Managed by Configure-Netskope-Local-CA-Bundle script
-export CURL_CA_BUNDLE='/Users/matt/.netskope/cacert_ns_combined.pem'
+# Managed by Netskope CA Bundle Script
+export CURL_CA_BUNDLE=/Users/matt/.netskope/nscacert_combined.pem
 
-# Managed by Configure-Netskope-Local-CA-Bundle script
-export NODE_EXTRA_CA_CERTS='/Users/matt/.netskope/cacert_ns_combined.pem'
+# Managed by Netskope CA Bundle Script
+export NODE_EXTRA_CA_CERTS=/Users/matt/.netskope/nscacert_combined.pem
 
-# Managed by Configure-Netskope-Local-CA-Bundle script
-export AWS_CA_BUNDLE='/Users/matt/.netskope/cacert_ns_combined.pem'
+# Managed by Netskope CA Bundle Script
+export AWS_CA_BUNDLE=/Users/matt/.netskope/nscacert_combined.pem
 
-# Managed by Configure-Netskope-Local-CA-Bundle script
-export SSL_CERT_FILE='/Users/matt/.netskope/cacert_ns_combined.pem'
+# Managed by Netskope CA Bundle Script
+export SSL_CERT_FILE=/Users/matt/.netskope/nscacert_combined.pem
 
-# Managed by Configure-Netskope-Local-CA-Bundle script
-export GIT_SSL_CAINFO='/Users/matt/.netskope/cacert_ns_combined.pem'
+# Managed by Netskope CA Bundle Script
+export GIT_SSL_CAINFO=/Users/matt/.netskope/nscacert_combined.pem
